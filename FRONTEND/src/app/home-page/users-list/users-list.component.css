@@ -1,0 +1,23 @@
+/* .mat-toolbar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    max-height: 10%;
+  } */
+/* .spacer {
+    flex: 1 1 auto;
+  } for the span*/
+/* 
+.div {
+    overflow-y: auto;
+    height: 71.7%;
+} */
+
+.table-container {
+    overflow-y: auto;
+    max-height: 71.7%;
+}
+.mat-cell,
+.mat-header-cell {
+    padding: 8px;
+}

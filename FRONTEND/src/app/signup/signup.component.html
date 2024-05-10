@@ -1,0 +1,36 @@
+<div class="signup-container">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Sign Up</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form (ngSubmit)="onSignUp()">
+        <mat-form-field class="input-field">
+          <mat-label>Username</mat-label>
+          <input matInput placeholder="Username" [(ngModel)]="Username" name="Username" required>
+        </mat-form-field>
+        <!-- <mat-error *ngIf="wrongUsername">Must include at least ....</mat-error> -->
+        <br>
+        <mat-form-field class="input-field">
+          <mat-label>Email</mat-label>
+          <input matInput placeholder="Email" [(ngModel)]="Email" name="Email" required>
+        </mat-form-field>
+        <!-- <mat-error *ngIf="wrongEmail">Must include at least ....</mat-error> -->
+        <br>
+        <mat-form-field class="input-field">
+          <mat-label>Password</mat-label>
+          <input matInput placeholder="Password" [(ngModel)]="password" name="password"
+            [type]="hidePassword ? 'password' : 'text'" required>
+          <button mat-icon-button matSuffix type="button" (click)="togglePasswordVisibility()">
+            <mat-icon>{{ hidePassword ? 'visibility_off' : 'visibility' }}</mat-icon>
+          </button>
+        </mat-form-field>
+        <mat-error *ngIf="ErrorFound"> {{ WrittenError }}</mat-error>
+        <br>
+        <div class="button-container">
+          <button mat-raised-button color="primary" type="submit">Sign Up</button>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
